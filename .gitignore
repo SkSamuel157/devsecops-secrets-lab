@@ -1,0 +1,6 @@
+.env
+*.key
+*.pem
+id_rsa
+credentials.json
+secrets/
