@@ -1,17 +1,17 @@
 # DevSecOps Secrets Lab
-> Hands-on DevSecOps laboratory focused on secure secret management using GitHub Actions, Docker, and environment variables.
+
+Hands-on DevSecOps laboratory focused on secure secret management using GitHub Actions, Docker and environment variables.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
-
 ![Docker](https://img.shields.io/badge/Docker-Container-blue)
-
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF)
-
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-Lab-success)
+
+---
 
 ## About
 
-This project was developed as a hands-on DevSecOps laboratory to demonstrate secure secret management practices in CI/CD pipelines.
+By integrating GitHub Actions, Docker, environment variables and Python, the laboratory demonstrates a secure DevSecOps workflow aligned with industry best practices.
 
 The lab shows how sensitive information can be securely stored using GitHub Secrets and injected into an application during workflow execution without exposing credentials in the source code.
 
@@ -24,6 +24,23 @@ Modern applications rely on sensitive information such as API keys, passwords, a
 
 This laboratory demonstrates a secure approach to managing secrets by combining GitHub Secrets, GitHub Actions, Docker, and environment variables. During the workflow execution, sensitive data is securely injected into the application without being exposed in the repository, following common DevSecOps practices used in CI/CD pipelines.
 
+## Contents
+
+- [About](#about)
+- [Project Overview](#project-overview)
+- [Objectives](#objectives)
+- [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Technologies](#technologies)
+- [Project Structure](#project-structure)
+- [Pipeline Workflow](#pipeline-workflow)
+- [Security Practices](#security-practices)
+- [Project Execution](#project-execution)
+- [Evidence](#evidence)
+- [Technical Documentation](#technical-documentation)
+- [Lessons Learned](#lessons-learned)
+- [Author](#author)
+- [License](#license)
 
 ## Objectives
 
@@ -95,11 +112,10 @@ devsecops-secrets-lab/
 ├── app/
 │   └── main.py
 │
-docs/
-├── images/
-│
-├── reports/
-│  └── DevSecOps_Secrets_Lab_Report.pdf
+├── docs/
+│   ├── images/
+│   └── reports/
+│       └── DevSecOps_Secrets_Lab_Report.pdf
 │
 ├── .dockerignore
 ├── .env.example
@@ -271,26 +287,25 @@ Container execution demonstrating that the application correctly consumes enviro
 
 ## Technical Documentation
 
-A complete technical report describing the laboratory, implementation details, workflow, architecture and security practices is available below.
+The complete technical documentation is available in the report below. It describes the project architecture, implementation process, workflow execution, Docker configuration, GitHub Actions pipeline, and security practices adopted throughout the laboratory.
 
-- [Technical Report (PDF)](docs/reports/DevSecOps_Secrets_Lab_Report.pdf)
+- [Technical Report (PDF)](...)
 
 ## Lessons Learned
 
-During this laboratory, the following concepts were practiced:
+This laboratory reinforced several practical DevSecOps concepts, including:
 
 - Secure secret management.
-- GitHub Actions workflow automation.
-- Docker integration.
-- Environment variable handling.
-- CI/CD pipeline fundamentals.
-- DevSecOps security best practices.
-- Docker containerization basics.
-- Secure CI/CD pipeline design.
+- CI/CD automation with GitHub Actions.
+- Docker containerization.
+- Secure environment variable handling.
+- Repository hardening using `.gitignore` and `.dockerignore`.
+- Practical implementation of secure development workflows.
+- Documentation and reproducible laboratory design.
 
 ## Author
 
-Samuel Castro
+**Samuel Castro**
 
 Cybersecurity Student specializing in Blue Team, DevSecOps and Infrastructure Security.
 
@@ -300,4 +315,6 @@ Cybersecurity Student specializing in Blue Team, DevSecOps and Infrastructure Se
 
 ## License
 
-This project was developed for educational purposes and portfolio demonstration.
+This project is available for educational and portfolio purposes.
+
+The source code may be used as a reference for learning secure DevSecOps concepts, provided proper attribution is maintained.
