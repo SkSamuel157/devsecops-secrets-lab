@@ -175,43 +175,99 @@ The application will consume the configured environment variables during executi
 
 ## Evidence
 
+### Repository Structure
+
+![Project Structure](docs/images/07_README.md.png)
+
+Project organization highlighting the application source code, GitHub Actions workflow, Docker configuration and documentation.
+
+---
+
+### Environment Variables
+
+![Environment Variables](docs/images/02_env.example.png)
+
+Example of the required environment variables used by the application. The repository provides a `.env.example` file while sensitive values are securely stored as GitHub Secrets.
+
+---
+
+### Git Ignore Configuration
+
+![Git Ignore](docs/images/03_gitignore.png)
+
+Sensitive files such as credentials, keys and local secret folders are excluded from version control.
+
+---
+
+### Docker Ignore Configuration
+
+![Docker Ignore](docs/images/04_dockerignore.png)
+
+Unnecessary files are excluded from the Docker build context, resulting in smaller and cleaner container images.
+
+---
+
+### Dockerfile
+
+![Dockerfile](docs/images/05_Dockerfile.png)
+
+Docker configuration used to build a lightweight Python container responsible for executing the application.
+
+---
+
 ### GitHub Actions Workflow
 
-![Workflow Execution](docs/images/08_actions_overview.png)
+![Pipeline YAML](docs/images/06_pipeline.yml.png)
 
-The workflow executes automatically after every push and securely injects repository secrets during the pipeline.
-
----
-
-### Repository Secrets
-
-![Repository Secrets](docs/images/07_repository_secrets.png)
-
-Sensitive information is stored using GitHub Secrets instead of hardcoded credentials.
+Workflow definition responsible for loading repository secrets and executing the application automatically after each push.
 
 ---
 
-### Pipeline Logs
+### GitHub Repository Secrets
 
-![Pipeline Logs](docs/images/09_actions_logs.png)
+![Repository Secrets](docs/images/08_RepositorySecrets.png)
 
-The workflow validates that secrets are available without exposing their values.
-
----
-
-### Docker Build
-
-![Docker Build](docs/images/10_docker_build.png)
-
-Docker successfully builds the application image.
+Sensitive credentials are securely stored using GitHub Repository Secrets instead of being committed to the source code.
 
 ---
 
-### Docker Execution
+### Workflow Execution
 
-![Docker Execution](docs/images/11_docker_execution.png)
+![Workflow Overview](docs/images/09_Actions.png)
 
-The container consumes environment variables securely during runtime.
+Successful execution of the GitHub Actions workflow after a push to the repository.
+
+---
+
+### Workflow Logs
+
+![Workflow Logs](docs/images/09_Actions2.png)
+
+Pipeline logs showing that secrets were successfully loaded while their values remained protected.
+
+---
+
+### Python Application Execution
+
+![Application Output](docs/images/10_Test.png)
+
+Application execution validating that environment variables are correctly injected without exposing sensitive information.
+
+---
+
+### Docker Image Build
+
+![Docker Build](docs/images/11_DockerBuild.png)
+
+Successful Docker image build using the provided Dockerfile.
+
+---
+
+### Docker Container Execution
+
+![Docker Container](docs/images/12_DockerImages.png)
+
+Container execution demonstrating that the application correctly consumes environment variables passed at runtime.
 
 ## Technical Documentation
 
